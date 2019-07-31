@@ -23,7 +23,8 @@ Check https://portswigger.net/burp/documentation/collaborator/deploying#dns-conf
 * bc 
 * openssl
 * Burp Suite Professional
-* Digital Ocean API access token.  
+* Digital Ocean API access token.
+* Allow inbound Ports (UDP and TCP) From digital ocean firewall.  
 
 ## Setup the environment 
 

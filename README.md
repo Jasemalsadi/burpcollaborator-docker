@@ -1,7 +1,9 @@
-# Burp Collaborator Server docker container with LetsEncrypt certificate
+# Burp Collaborator Server docker container with LetsEncrypt (Using DigitalOcean)
 
 This repository includes a set of scripts to install a Burp Collaborator Server in a docker environment, using a LetsEncrypt wildcard certificate.
 The objective is to simplify as much as possible the process of setting up and maintaining the server.
+## Additions
+I have setup digital ocean rather than cloudflare. 
 
 ## Setup your domain
 
@@ -21,19 +23,23 @@ Check https://portswigger.net/burp/documentation/collaborator/deploying#dns-conf
 * bc 
 * openssl
 * Burp Suite Professional
+* Digital Ocean API access token.  
 
 ## Setup the environment 
 
 * Clone or download the repository to the server (tested on ubuntu 16.04) to a directory of your choice.
 * Put the Burp Suite JAR file in ```./burp/pkg/burp.jar``` (make sure the name is exactly ```burp.jar```, and it is the actual file **not a link**)
+* Add  the token in /root/burp_digitaloccean_token.ini  :  
+
+        dns_digitalocean_token = "value".
+         
+* U may need to disable IPv6 entirely to force Docker use IPv4 ports.
 * Run init.sh with your subdomain and server public IP address as argument:
 
 ```./init.sh burp.example.com 1.2.3.4```
 
 This will start the environment for the subdomain ```burp.example.com```, creating a wildcard certificate as ```*.burp.example.com```.
 
-I'm using an ugly hack on the certbot-dns-cloudflare plugin from certbot, where it just runs a local dnsmasq with the required records, and makes
-all of this automagically happen.
 
 If everything is OK, burp will start with the following message:
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
-# certbot-dns-cloudflare documentation build configuration file, created by
-# sphinx-quickstart on Tue May  9 10:20:04 2017.
+# certbot-dns-digitalocean documentation build configuration file, created by
+# sphinx-quickstart on Wed May 10 10:52:06 2017.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -52,7 +52,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'certbot-dns-cloudflare'
+project = u'certbot-dns-digitalocean'
 copyright = u'2017, Certbot Project'
 author = u'Certbot Project'
 
@@ -116,7 +116,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'certbot-dns-cloudflaredoc'
+htmlhelp_basename = 'certbot-dns-digitaloceandoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -143,7 +143,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'certbot-dns-cloudflare.tex', u'certbot-dns-cloudflare Documentation',
+    (master_doc, 'certbot-dns-digitalocean.tex', u'certbot-dns-digitalocean Documentation',
      u'Certbot Project', 'manual'),
 ]
 
@@ -153,7 +153,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'certbot-dns-cloudflare', u'certbot-dns-cloudflare Documentation',
+    (master_doc, 'certbot-dns-digitalocean', u'certbot-dns-digitalocean Documentation',
      [author], 1)
 ]
 
@@ -164,8 +164,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'certbot-dns-cloudflare', u'certbot-dns-cloudflare Documentation',
-     author, 'certbot-dns-cloudflare', 'One line description of project.',
+    (master_doc, 'certbot-dns-digitalocean', u'certbot-dns-digitalocean Documentation',
+     author, 'certbot-dns-digitalocean', 'One line description of project.',
      'Miscellaneous'),
 ]
 

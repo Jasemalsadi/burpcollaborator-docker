@@ -2,16 +2,17 @@ from setuptools import setup
 from setuptools import find_packages
 
 
-version = '0.31.0.dev0'
+version = '0.37.0.dev0'
 
 # Remember to update local-oldest-requirements.txt when changing the minimum
 # acme/certbot version.
 install_requires = [
-    'acme>=0.21.1',
-    'certbot>=0.21.1',
-    'cloudflare>=1.5.1',
+    'acme>=0.29.0',
+    'certbot>=0.34.0',
     'mock',
+    'python-digitalocean>=1.11',
     'setuptools',
+    'six',
     'zope.interface',
 ]
 
@@ -21,9 +22,9 @@ docs_extras = [
 ]
 
 setup(
-    name='certbot-dns-cloudflare',
+    name='certbot-dns-digitalocean',
     version=version,
-    description="Cloudflare DNS Authenticator plugin for Certbot",
+    description="DigitalOcean DNS Authenticator plugin for Certbot",
     url='https://github.com/certbot/certbot',
     author="Certbot Project",
     author_email='client-dev@letsencrypt.org',
@@ -59,8 +60,8 @@ setup(
     },
     entry_points={
         'certbot.plugins': [
-            'dns-cloudflare = certbot_dns_cloudflare.dns_cloudflare:Authenticator',
+            'dns-digitalocean = certbot_dns_digitalocean.dns_digitalocean:Authenticator',
         ],
     },
-    test_suite='certbot_dns_cloudflare',
+    test_suite='certbot_dns_digitalocean',
 )

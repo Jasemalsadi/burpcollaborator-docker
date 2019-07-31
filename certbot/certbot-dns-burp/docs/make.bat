@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=certbot-dns-cloudflare
+set SPHINXPROJ=certbot-dns-digitalocean
 
 if "%1" == "" goto help
 

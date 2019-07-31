@@ -1,1 +1,1 @@
-Cloudflare DNS Authenticator plugin for Certbot
+DigitalOcean DNS Authenticator plugin for Certbot
